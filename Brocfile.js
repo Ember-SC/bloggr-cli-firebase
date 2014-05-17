@@ -15,6 +15,11 @@ var app = new EmberApp({
 
 // Use this to add additional libraries to the generated output files.
 app.import('vendor/ember-data/ember-data.js');
+app.import('vendor/emberFire/dist/emberfire.js');
+app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
+app.import('vendor/momentjs/min/moment.min.js');
+app.import('vendor/typeahead.js/dist/typeahead.jquery.min.js');
+
 
 // If the library that you are including contains AMD or ES6 modules that
 // you would like to import into your application please specify an
