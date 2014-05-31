@@ -4,6 +4,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
 	this.resource('about');
+    this.resource('authors', function(){
+        this.resource('author', { path: ':author_id'})
+    });
     this.resource('posts', function(){
         this.resource('post', { path: ':post_id' });
     });

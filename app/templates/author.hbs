@@ -1,5 +1,5 @@
 {{#if isEditing}}
-  {{partial 'post/edit'}}
+  <p>{{input type="text" value=name}}</p>
   <button {{action 'doneEditing'}}>Done</button>
   <button {{action 'cancelEditing'}}>Cancel</button>
 {{else}}
