@@ -34,3 +34,14 @@ ember server
 ```
 
 and then [browse away](http://localhost:4200)!
+
+## Configuring your Own Firebase Account
+
+This section describes how to set up your own Firebase account and how to hook this EmberJS app up to it.
+
+1.  Follow [instructions](https://www.firebase.com/account/#/) on creating your own Firebase account.  Stay with the `Hacker` plan unless you want
+    to spend money.
+1.  Look for your app URL; will look something like `sizzling-fire-3441.firebaseio.com`.
+1.  In this project, substitute your app URL into line 2 of `app/adapters/application.js`.
+1.  Your backend database will be empty; configure it with "fixture" data as you desire.
+1.  Run your local ember server: `ember server`.
