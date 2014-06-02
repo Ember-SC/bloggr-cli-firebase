@@ -1,0 +1,9 @@
+{{#if isEditing}}
+  <p>{{input type="text" value=name}}</p>
+  <button {{action 'doneEditing'}}>Done</button>
+  <button {{action 'cancelEditing'}}>Cancel</button>
+{{else}}
+  <button {{action 'edit'}}>Edit</button>
+{{/if}}
+
+<h1>{{name}}</h1>
