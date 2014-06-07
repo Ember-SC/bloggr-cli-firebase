@@ -1,10 +1,12 @@
 export default Ember.ArrayController.extend({
 
-   actions: { 
-        new: function() {
-            // this.store.createRecord("author") {
-            //     this.set("name", "somename");
-            // }
+    actions: {
+        new: function () {
+            this.store.createReccord('author')
+            {
+                this.set('name', 'give me a name, please');
+            }
+            ;
         }
     }
 });
