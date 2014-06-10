@@ -2,8 +2,9 @@ export default Ember.ObjectController.extend({
     isEditing: false,
 
 
+
     edit: function() {
-           this.set('oldTitle' , this.get('title'));
+         this.set('oldTitle' , this.get('title'));
          this.set('oldAuthor', this.get('author'));
          this.set('oldExcerpt', this.get('excerpt'));
          this.set('oldBody', this.get('body')) ;
@@ -21,7 +22,7 @@ export default Ember.ObjectController.extend({
        this.set('author', this.get('oldAuthor'));
        this.set('excerpt', this.get('oldExcerpt'));
        this.set('body', this.get('oldBody'));
-         this.set('isEditing', false);
+       this.set('isEditing', false);
     //this.set('content', this.get('oldContent'));
 
     }
