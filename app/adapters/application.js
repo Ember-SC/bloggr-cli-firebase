@@ -1,5 +1,3 @@
 export default DS.FirebaseAdapter.extend({
-
-    firebase: new window.Firebase('https://sizzling-fire-3441.firebaseio.com')
-
+    firebase: new window.Firebase('https://' + window.ENV.firebase_instance + '.firebaseio.com')
 });

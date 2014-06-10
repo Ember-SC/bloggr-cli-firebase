@@ -9,6 +9,9 @@
 /vendor/*
 !/vendor/_loader.js
 
+# Private information
+app/initializers/private.js
+
 # misc
 /.sass-cache
 /connect.lock
