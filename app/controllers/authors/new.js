@@ -7,7 +7,7 @@ export default Ember.ObjectController.extend({
         },
 
         cancel: function () {
-            // Don't have to do anything
+            this.transitionToRoute('authors');
         }
 
     }
