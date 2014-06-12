@@ -12,11 +12,13 @@ export default Ember.ObjectController.extend({
         doneEditing: function () {
             this.set('isEditing', false);
             this.get('model').save();
+            this.transitionToRoute('authors');
         },
 
         cancelEditing: function () {
             this.get('model').set('name', this.get('oldName'));
             this.set('isEditing', false);
+            this.transitionToRoute('authors');
         }
 
     }

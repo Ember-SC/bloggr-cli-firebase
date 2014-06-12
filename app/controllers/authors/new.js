@@ -4,9 +4,11 @@ export default Ember.ObjectController.extend({
 
         enter: function () {
             this.get('model').save();
+            this.transitionToRoute('authors');
         },
 
         cancel: function () {
+            this.get('model').deleteRecord();
             this.transitionToRoute('authors');
         }
 
