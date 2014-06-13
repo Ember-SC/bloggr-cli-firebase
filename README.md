@@ -41,7 +41,23 @@ This section describes how to set up your own Firebase account and how to hook t
 
 1.  Follow [instructions](https://www.firebase.com/account/#/) on creating your own Firebase account.  Stay with the `Hacker` plan unless you want
     to spend money.
-1.  Look for your app URL; will look something like `sizzling-fire-3441.firebaseio.com`.
-1.  In this project, substitute your app URL into line 2 of `app/adapters/application.js`.
-1.  Your backend database will be empty; configure it with "fixture" data as you desire.
+1.  Look for your app URL; will look something like `sizzling-smoke-9999.firebaseio.com`.
+1.  In this project, add a file, `private.js` into folder `app/initializers` with the following contents:
+
+```javascript
+// This file is NOT checked in, so you can put your
+// private info here.
+export default {
+
+    name: 'private',
+    initialize: function() {
+        // NOTE: this is necessary for setting your private ID for your Firebase account.
+        // You should substitute your own *private* portion of your unique Firebase data URL:
+        window.ENV.firebase_instance = 'sizzling-smoke-9999';
+    }
+};
+
+```
+
 1.  Run your local ember server: `ember server`.
+1.  Your backend database will be empty; configure it by using `bloggr` to add authors and posts as desired.

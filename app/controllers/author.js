@@ -1,21 +1,24 @@
 export default Ember.ObjectController.extend({
     isEditing: false,
+    oldName: '',
 
     actions: {
 
         edit: function () {
-            this.set('oldName', this.get('name'));
+            this.set('oldName', this.get('model').get('name'));
             this.set('isEditing', true);
         },
 
         doneEditing: function () {
             this.set('isEditing', false);
-            this.get('store').commit();
+            this.get('model').save();
+            this.transitionToRoute('authors');
         },
 
         cancelEditing: function () {
-            this.set('name', this.get('oldName'));
+            this.get('model').set('name', this.get('oldName'));
             this.set('isEditing', false);
+            this.transitionToRoute('authors');
         }
 
     }
